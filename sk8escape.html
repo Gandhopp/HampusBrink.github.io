@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Sk8 Escape - Hampus Brink</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,82 +15,116 @@
 			code {
 				background-color: rgb(14, 14, 43);
 				color: aliceblue;
-				color
+				font-size: medium;
+			}
+
+			h1 {
+		font-size: 2.75em;
+	}
+
+		h1.major {
+			margin: 0 0 1.3em 0;
+			position: relative;
+			padding-bottom: 0.35em;
+		}
+
+			h1.major:after {
+				background-image: -moz-linear-gradient(to right, #3700ff, #100d35);
+				background-image: -webkit-linear-gradient(to right, #3700ff, #100d35);
+				background-image: -ms-linear-gradient(to right, #3700ff, #100d35);
+				background-image: linear-gradient(to right, #3700ff, #100d35);
+				-moz-transition: max-width 0.2s ease;
+				-webkit-transition: max-width 0.2s ease;
+				-ms-transition: max-width 0.2s ease;
+				transition: max-width 0.2s ease;
+				border-radius: 0.2em;
+				bottom: 0;
+				content: '';
+				height: 0.05em;
+				position: absolute;
+				right: 0;
+				width: 100%;
 			}
 		</style>
+		<script
+		src="https://code.jquery.com/jquery-3.6.1.min.js"
+		integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+		crossorigin="anonymous"></script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
+			<header id="header" style="background-color: #040a30">
+				<a href="index.html" class="title" style="letter-spacing: 0.4rem; font-size: 0.9em;">HAMPUS BRINK</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="#" class="active">Sk8 Escape</a></li>
 					</ul>
 				</nav>
 			</header>
-
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" style="background-color: #100d35">
 
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Sk8 Escape</h1>
 							<h2>About Sk8 Escape</h2>
-							<p> Sk8 Escape was a project that started as my final assignment for unity during my time at <a href="https://www.forsbergsskola.se%22%3E/">Forsbergs</a>
+							<!--use span if changing color-->
+							<span> Sk8 Escape was a project that started as my final assignment for unity during my time at <a href="https://www.forsbergsskola.se%22%3E/">Forsbergs</a></span>
 							<p> I was part of the intergrations team of the project and I was resbonsible for the inventory, item creation and general intergrations stuff making sure that everything came together nicely</p>
 							<p> I learned a lot during this project especially how to use interfaces properly and setup a structured system and also how to effectively serialize objects to JSON</p>
 							
 							<p>Since most of my work was behind the scenes stuff it there isnt much I can show besides code samples and the UI for the inventory</p>
 
-							<h3 class="major">Game Play:</h3>
+							<h3 class="major" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Gameplay:</h3>
 
 							<span class="image fit"><img src="images/sk8escape_gameplay.png" width="60%" height="60%"alt="" /></span>
 
-							<h3 class="major">Menu:</h3>
+							<h3 class="major" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Menu:</h3>
 
 							<span class="image fit"><img src="images/sk8escape_menu.png" width="60%" height="60%"alt="" /></span>
 
-							<h3 class="major">Inventory:</h3>
+							<h3 class="major" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Inventory:</h3>
 
-							<span class="image fit"><img src="images/sk8escape_inventory.png" width="60%" height="60%"alt="" /></span>
-							<h3 class="major">Code Sample:</h3>
+							<span class="image fit"><img src="images/sk8escape_inventory.png" width="60%" height="60%"alt="" /></span>							
+								<ul style="list-style-type: none;">
+									<li><button class="button primary fit" id="dropdown1">Code Sample</button></li>
+								</ul>
 
-							<div>
+							<div id="code1" style="display: none;">
 								<pre>
 									<code>
-									  public IEnumerable<ItemData> Load()
-										  {
-											  var path = Application.persistentDataPath + "/inventory.save.json";
-											  ItemData[] items;
-											  if (!File.Exists(path)) items = Array.Empty<ItemData>();
-											  else
-											  {
-												  var json = File.ReadAllText(path);
-												  var data = JsonUtility.FromJson<SerializableInventory>(json);
-												  items = data.serializableItemDatas.Select(Convert).Where(it => it!= null).ToArray();
-											  }
+public IEnumerable<ItemData> Load()
+{
+var path = Application.persistentDataPath + "/inventory.save.json";
+	ItemData[] items;
+if (!File.Exists(path)) 
+	items = Array.Empty<ItemData>();
+else
+{
+	var json = File.ReadAllText(path);
+	var data = JsonUtility.FromJson<SerializableInventory>(json);
+	items = data.serializableItemDatas.Select(Convert).Where(it => it!= null).ToArray();
+}
 								  
-											  var hasSkateboard = false;
-											  foreach (var itemData in items)
-											  {
-												  if (itemData.ItemConfig.ItemType == ItemType.SkateBoard)
-												  {
-													  hasSkateboard = true;
-												  }
-											  }
-											  var itemsList = items.ToList();
+var hasSkateboard = false;
+foreach (var itemData in items)
+{
+	if (itemData.ItemConfig.ItemType == ItemType.SkateBoard)
+	{
+		hasSkateboard = true;
+	}
+}
+var itemsList = items.ToList();
+
+if (hasSkateboard) return itemsList;
+var item = Dependencies.Instance.ItemFactory.CreateItem(Dependencies.Instance.DefaultSkateBoard);
+itemsList.Add(item);
 								  
-											  if (hasSkateboard) return itemsList;
-											  var item = Dependencies.Instance.ItemFactory.CreateItem(Dependencies.Instance.DefaultSkateBoard);
-											  itemsList.Add(item);
-								  
-											  return itemsList;
-										  }
+return itemsList;
+}
 									</code>
 								  </pre>
 							</div>
@@ -102,10 +136,10 @@
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
+			<footer id="footer" class="wrapper alt" style="background-color: #040a30;">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -118,6 +152,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+            $("#dropdown1").click(function(){
+                const displayState = $("#code1").css("display")
+				$("#code1").fadeIn();
 
+                if(displayState === "block"){
+					$("#code1").fadeOut();
+                    $("#code1").hide("slow")
+                }
+                else{
+                    $("#code1").show()
+                }
+
+            })
+			</script>
 	</body>
 </html>

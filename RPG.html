@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RPG - Hampus Brink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			code {
+				background-color: rgb(14, 14, 43);
+				color: aliceblue;
+				font-size: medium;
+			}
+
+			h1 {
+		font-size: 2.75em;
+	}
+
+		h1.major {
+			margin: 0 0 1.3em 0;
+			position: relative;
+			padding-bottom: 0.35em;
+		}
+
+			h1.major:after {
+				background-image: -moz-linear-gradient(to right, #ff5f02, #000000);
+				background-image: -webkit-linear-gradient(to right, #ff5f02, #000000);
+				background-image: -ms-linear-gradient(to right, #ff5f02, #000000);
+				background-image: linear-gradient(to right, #ff5f02, #000000);
+				-moz-transition: max-width 0.2s ease;
+				-webkit-transition: max-width 0.2s ease;
+				-ms-transition: max-width 0.2s ease;
+				transition: max-width 0.2s ease;
+				border-radius: 0.2em;
+				bottom: 0;
+				content: '';
+				height: 0.05em;
+				position: absolute;
+				right: 0;
+				width: 100%;
+			}
+		</style>
+		<script
+		src="https://code.jquery.com/jquery-3.6.1.min.js"
+		integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+		crossorigin="anonymous"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header" style="background-color: #242424">
+				<a href="index.html" class="title" style="letter-spacing: 0.4rem; font-size: 0.9em;">HAMPUS BRINK</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#" class="active">RPG</a></li>
+					</ul>
+				</nav>
+			</header>
+		<!-- Wrapper -->
+			<div id="wrapper" style="background-color: #010001">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">RPG</h1>
+							<!--use span if changing color-->
+							<span> This game was a group project that came to life while I was studying at <a href="https://www.forsbergsskola.se%22%3E/">Forsbergs</a> under the span of 2 months</span>
+							<p></p>
+							<h4>My contributions</h4>
+							<ul>
+								<li>Enemy combat system</li>
+								<li>Boss combat system</li>
+								<li>Spells</li>
+								<li>See-through Wall Shader</li>
+							</ul>
+							<p> </p>
+
+							<p>Starter area desined using unity terrain tool</p>
+							<video autoplay="" muted="" loop="" style="	max-width: 100%; max-height: 100%;">
+								<source src="images/RPG_HUB_SHOWCASE.mp4" type="video/mp4">
+						  </video>
+
+							<p>The combat system is dynamic and has properties like rock paper siscors, The player has 3 attacks: blocking,light-attacks and heavy-attacks.</p>
+						  	<p>Depending on what attack you do the interactions between enemies are different. You can also perform a parry if you block at the right time</p>
+							<video autoplay="" muted="" loop="" style="	max-width: 100%; max-height: 100%;">
+								<source src="images/RPG_COMBAT_SHOWCASE.mp4" type="video/mp4">
+						  </video>
+
+						  	<p>The boss system was designed to be inherited and used for all future bosses, However this was the only one that made it in to the game as the others were scrapped.</p>
+						  	<p>State machines were used to achieve this behaviour.</p>
+							<video autoplay="" muted="" loop="" style="	max-width: 100%; max-height: 100%;">
+								<source src="images/RPG_BOSS_SHOWCASE.mp4" type="video/mp4">
+							</video>
+							<!-- <span class="image fit"><img src="images/sk8escape_codesample.png" width="50" height="800"alt="" /></span> -->
+							<p></p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt" style="background-color: #161616;">
+				<div class="inner">
+					<ul class="menu">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+            $("#dropdown1").click(function(){
+                const displayState = $("#code1").css("display")
+				$("#code1").fadeIn();
+
+                if(displayState === "block"){
+					$("#code1").fadeOut();
+                    $("#code1").hide("slow")
+                }
+                else{
+                    $("#code1").show()
+                }
+
+            })
+			</script>
+	</body>
+</html>

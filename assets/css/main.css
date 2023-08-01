@@ -1916,6 +1916,7 @@ input, select, textarea {
 		.button.primary {
 			background-color: #ffffff;
 			color: #312450 !important;
+			width: 97%;
 		}
 
 			input[type="submit"].primary:after,
@@ -3370,7 +3371,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: rgb(30, 0, 54);
 		cursor: default;
 		padding: 1.75em 2em;
 	}
