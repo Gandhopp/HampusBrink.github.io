@@ -119,10 +119,10 @@ $header-height: 5vh;
     width: 350px;
     height: fit-content;
     background-color: $accent-color;
-    transition: transform 0.2s ease, border 0.2s ease;
+    transition: border 0.2s ease;
     border: $accent-color 2px solid;
     &:hover{
-        transform: scale(1.03);
+        //transform: scale(1.03);
         border: $text-color 2px solid;
         .card-top{
             border-bottom: $text-color 2px solid;
@@ -225,13 +225,13 @@ $header-height: 5vh;
     display: flex;
     gap: 32px;
     a{
-        transition: transform 0.2s ease, color 0.2s ease;
+        transition: color 0.2s ease;
         text-decoration: none;
         color: inherit;
         font-size: 64px;
-        &:hover{
+        /* &:hover{
             transform: scale(1.1);
-        }
+        } */
     }
 }
 
@@ -243,9 +243,9 @@ $header-height: 5vh;
     border-radius: 16px;
     cursor: pointer;
     font-size: 16px;
-    &:hover{
+    /* &:hover{
         transform: scale(1.05);
-    }
+    } */
 }
 
 //Subpages
@@ -296,12 +296,6 @@ $header-height: 5vh;
     flex-direction: column;
     justify-content: space-evenly;
 }
-
-/* .img-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .section{
     display: flex;

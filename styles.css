@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 .shaded {
@@ -115,11 +114,10 @@
   height: -moz-fit-content;
   height: fit-content;
   background-color: #312450;
-  transition: transform 0.2s ease, border 0.2s ease;
+  transition: border 0.2s ease;
   border: #312450 2px solid;
 }
 .card:hover {
-  transform: scale(1.03);
   border: #FEFCFD 2px solid;
 }
 .card:hover .card-top {
@@ -224,13 +222,13 @@
   gap: 32px;
 }
 .contact-icons a {
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
   text-decoration: none;
   color: inherit;
   font-size: 64px;
-}
-.contact-icons a:hover {
-  transform: scale(1.1);
+  /* &:hover{
+      transform: scale(1.1);
+  } */
 }
 
 .email-btn {
@@ -241,9 +239,9 @@
   border-radius: 16px;
   cursor: pointer;
   font-size: 16px;
-}
-.email-btn:hover {
-  transform: scale(1.05);
+  /* &:hover{
+      transform: scale(1.05);
+  } */
 }
 
 .sub-hero {
@@ -295,11 +293,6 @@
   justify-content: space-evenly;
 }
 
-/* .img-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .section {
   display: flex;
   justify-content: space-evenly;
