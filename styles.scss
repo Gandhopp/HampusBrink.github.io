@@ -302,12 +302,19 @@ $header-height: 5vh;
 .section{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     height: fit-content;
     gap: 16px;
     padding: 16px;
     img, video, iframe{
         height: 300px;
+    }
+    .section-text-container{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 1500px;
     }
     p{
         font-size: 16px;
@@ -324,6 +331,12 @@ $header-height: 5vh;
     padding: 16px;
     img, video, iframe{
         height: 300px;
+    }
+    .section-text-container{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 1500px;
     }
     p{
         font-size: 16px;

@@ -297,6 +297,7 @@
 .section {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -305,6 +306,12 @@
 }
 .section img, .section video, .section iframe {
   height: 300px;
+}
+.section .section-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 1500px;
 }
 .section p {
   font-size: 16px;
@@ -322,6 +329,12 @@
 }
 .section-vertical img, .section-vertical video, .section-vertical iframe {
   height: 300px;
+}
+.section-vertical .section-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 1500px;
 }
 .section-vertical p {
   font-size: 16px;

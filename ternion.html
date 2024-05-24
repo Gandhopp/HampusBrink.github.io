@@ -41,34 +41,33 @@
         <div class="wrapper">
             <div class="main-content">
                 <h1>Ternion</h1>
+                <a href="https://store.steampowered.com/app/2868210/Ternion/" style="color: royalblue;">Link to Steam page</a>
                 <section class="section">
                     <img src="Imgs-videos/ternion2.png" alt="">
                     <div class="text-container">
-                        <p>Ternion is the name of the game I made for my graduation project during my time studying at Forsbergs.
-                        <br>Together with two of my classmates Luca Belluso and Raphael Mccabe we came up with the idé of making a multiplayer first person shooter in Unreal Engine 5.
-                        <br>The video on the home page is also from this game.</p>
-                        <p>My main goal with this project was that I really wanted to learn networking code since I've always preferred multiplayer games over single player games.
-                        <br>So naturally I became the guy responsible for every single network related code for the project.
-                        <br>Since we were only three people taking on the task of creating a 3v3 competitive shooter I also had to take part in creating other vital parts of the game like an easy to use Gun creation system,UI, VFX, SFX and some other stuff but my primary focus was networking.</p>
+                        <p>Ternion is the name of the game I made for my graduation project during my time studying at Forsbergs.</p>
+
+                        <p>Together with two of my classmates Luca Belluso and Raphael Mccabe we came up with the idé of making a multiplayer first person shooter in Unreal Engine 5.</p>
+                        <p>The video on the home page is also from this game.</p>
+                        <p>My main goal with this project was that I really wanted to learn networking code since I've always preferred multiplayer games over single player games.</p>
+                        <p>So naturally I became the guy responsible for every single network related code for the project.</p>
+
+                        <p>Since we were only three people taking on the task of creating a 3v3 competitive shooter I also had to take part in creating other vital parts of the game like an easy to use Gun creation system,UI, VFX, SFX and some other stuff but my primary focus was networking.</p>
                     </div>
                 </section>
                 <h2>Network Overview</h2>
                 <section class="section">
-                    <p>The core of our multiplayer system is built around Epic Games networking tool: Epic Online Services (EOS) which is an SDK for Unreal Engine that has built in features like Session creation, Session finding and joining and most importantly allows us to connect to our game through Epic Games accounts.
-                    <br>I would split up everything network related that I made for the game into two parts, the first half is the external part, setting up EOS to work with Unreal Engine and actually connect to clients to the same server.
-                    <br>The second half, replication,  is a more traditional style of programming such as c++ code and blueprints which can all be done within the game engine without anything external.
-                    <br>Due to very poor documentation of the SDK I turned to tutorials explaining EOS to someone like me who have no prior experience with the tool.
-                    <br>Unfortunately these tutorials ended rather abruptly without showing how to actually get two players on each screen (kinda important if you want multiplayer).
-                    <br>It took me about a week of searching and annoying my teachers and their previous colleagues before I finally could get it to work.
-                    <br>Unfortunately for me the replication part was not much easier.
-                    <br>Understanding what events needed to be called from the server and which clients owned which objects and what objects existed on what client was very confusing at first.
-                    <br>For example I didn't know that the server knew about every playercontroller but clients only knew their own.
-                    <br>This caused the server to duplicate its UI when accessing it from the player controller as it received the call multiple times and changed the UI that it was not supposed to have which was just a mess.
-                    <br>Issues like these appeared all the time, Walls spawning for server but not for clients, damage sometimes applied twice for the server but not on the clients, victory ui only showing for exactly 2 people but never more never less and many more.
-                    <br>While yes, fixing these issues were incredibly frustrating due to how different you have to approach problems compared to your regular programming issues.
-                    <br>Learning what information the server should handle, Understanding why the RPC (remote procedure call) call doesn't reach the client due to the object only existing on the server and finally fixing it was not only super satisfying but also saved the project all together.
-                    <br>Just thinking about it makes me want to keep on working on this project.
-                    </p>
+                    <div class="section-text-container">
+                        <p>The core of our multiplayer system is built around Epic Games networking tool: Epic Online Services (EOS) which is an SDK for Unreal Engine that has built in features like Session creation, Session finding and joining and most importantly allows us to connect to our game through Epic Games accounts. I would split up everything network related that I made for the game into two parts, the first half is the external part, setting up EOS to work with Unreal Engine and actually connect to clients to the same server.</p>
+                        <p>The second half, replication,  is a more traditional style of programming such as c++ code and blueprints which can all be done within the game engine without anything external.Due to very poor documentation of the SDK I turned to tutorials explaining EOS to someone like me who have no prior experience with the tool. Unfortunately these tutorials ended rather abruptly without showing how to actually get two players on each screen (kinda important if you want multiplayer). It took me about a week of searching and annoying my teachers and their previous colleagues before I finally could get it to work.</p>
+                        <p>Unfortunately for me the replication part was not much easier.
+                        Understanding what events needed to be called from the server and which clients owned which objects and what objects existed on what client was very confusing at first.
+                        For example I didn't know that the server knew about every playercontroller but clients only knew their own.
+                        This caused the server to duplicate its UI when accessing it from the player controller as it received the call multiple times and changed the UI that it was not supposed to have which was just a mess.
+                        Issues like these appeared all the time, Walls spawning for server but not for clients, damage sometimes applied twice for the server but not on the clients, victory ui only showing for exactly 2 people but never more never less and many more.
+                        While yes, fixing these issues were incredibly frustrating due to how different you have to approach problems compared to your regular programming issues.
+                        Learning what information the server should handle, Understanding why the RPC (remote procedure call) call doesn't reach the client due to the object only existing on the server and finally fixing it was not only super satisfying but also saved the project all together.</p>
+                    </div>
                     <div>
                         <img src="Imgs-videos/ternion-lobby.png" alt="">
                         <img src="Imgs-videos/ternion1.png" alt="">
@@ -80,26 +79,30 @@
                         <source src="Imgs-videos/ternion-gunplay.mp4" type="video/mp4">
                         Your browser does not support the video tag
                     </video>
-                    <p>Another thing I was responsible for making was a system that allowed us to create easily modifiable guns for every character.
-                    <br>One thing in particular that we wanted to have in the game was a recoil pattern that wasn't going to be random but the same every time.
-                    <br>I love when fps games have a really difficult recoil pattern just because it's a unique but effective way to make shooting more difficult than just requiring massive amounts of aim practice.
-                    <br>If you've ever played the game Rust then you know what I'm talking about.
-                    <br>Rust has a weapon that has such a difficult spray pattern that you need thousands of hours to perfect it.
-                    <br>Unfortunately they reworked this gun to make it easier for newer players and a big inspiration for me to make the guns in our game so difficult to control was because of my desire to recreate the feeling I got from mastering that gun.
-                    <br>Our gun system comes with a tedious but necessary array that you put in x and y values for where you want each individual bullet to land.
-                    <br>While most recoil pattern systems use a curve to make the bullets go in a general pattern I really wanted to have the freedom of making sure I have full control over every individual bullet and to achieve this I thought that an array would be the optimal answer.
-                    <br>And we only have 3 weapons, one being a sniper so technically only 2 that we needed to make an array for so not that much time was lost.
-                    </p>
+                    <div class="section-text-container">
+
+                        <p>Another thing I was responsible for making was a system that allowed us to create easily modifiable guns for every character.
+                        One thing in particular that we wanted to have in the game was a recoil pattern that wasn't going to be random but the same every time.
+                        I love when fps games have a really difficult recoil pattern just because it's a unique but effective way to make shooting more difficult than just requiring massive amounts of aim practice.</p>
+                        <p>If you've ever played the game Rust then you know what I'm talking about.
+                        Rust has a weapon that has such a difficult spray pattern that you need thousands of hours to perfect it.
+                        Unfortunately they reworked this gun to make it easier for newer players and a big inspiration for me to make the guns in our game so difficult to control was because of my desire to recreate the feeling I got from mastering that gun.
+                        Our gun system comes with a tedious but necessary array that you put in x and y values for where you want each individual bullet to land.
+                        While most recoil pattern systems use a curve to make the bullets go in a general pattern I really wanted to have the freedom of making sure I have full control over every individual bullet and to achieve this I thought that an array would be the optimal answer.
+                        And we only have 3 weapons, one being a sniper so technically only 2 that we needed to make an array for so not that much time was lost.</p>
+                    </div>
                 </section>
                 <h2>UI</h2>
                 <section class="section">
-                    <p>I made the groundwork for the HUD of the game as well.
-                    <br>I'm no designer so Raphael had to make it pretty but the functionality is my doing.
-                    <br>I'm especially proud of the making of the kill feed and scoreboard as they both required quite a bit of refactoring of my code to credit each player correctly.
-                    <br>I also had to make sure that you wouldn't get a kill from suicide and that killing a team mate wouldn't get you kill credit either.
-                    <br>Updating every player when someone died was also not as easy as you might think because of the fact that widgets (UI objects in unreal) do not receive RPC calls as they only exist locally.
-                    <br>I also designed these two so my artistic skills are not completely nonexistent.
-                    </p>
+                    <div class="section-text-container" style="width: 700px;">
+                        <p>I made the groundwork for the HUD of the game as well.
+                        I'm no designer so Raphael had to make it pretty but the functionality is my doing.
+                        I'm especially proud of the making of the kill feed and scoreboard as they both required quite a bit of refactoring of my code to credit each player correctly.
+                        I also had to make sure that you wouldn't get a kill from suicide and that killing a team mate wouldn't get you kill credit either.
+                        Updating every player when someone died was also not as easy as you might think because of the fact that widgets (UI objects in unreal) do not receive RPC calls as they only exist locally.
+                        I also designed these two so my artistic skills are not completely nonexistent. 
+                        </p>
+                    </div>
                     <video autoplay muted loop>
                         <source src="Imgs-videos/ternion-ui.mp4" type="video/mp4">
                         Your browser does not support the video tag
